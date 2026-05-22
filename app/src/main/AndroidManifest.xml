@@ -16,10 +16,10 @@
             android:exported="true" />
         <activity
             android:name=".ActDatosRegistro"
-            android:exported="false" />
+            android:exported="true" />
         <activity
             android:name=".act_login"
-            android:exported="false" />
+            android:exported="true" />
         <activity
             android:name=".act_intro"
             android:exported="true">

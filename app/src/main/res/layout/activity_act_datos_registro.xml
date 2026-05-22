@@ -64,11 +64,10 @@
                         android:id="@+id/tvCedula"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginBottom="16dp"
                         android:layout_marginTop="2dp"
+                        android:layout_marginBottom="16dp"
                         android:textColor="#212121"
-                        android:textSize="16sp"
-                        tools:text="1234567890" />
+                        android:textSize="16sp" />
 
                     <View
                         android:layout_width="match_parent"
@@ -89,11 +88,10 @@
                         android:id="@+id/tvNombres"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginBottom="16dp"
                         android:layout_marginTop="2dp"
+                        android:layout_marginBottom="16dp"
                         android:textColor="#212121"
-                        android:textSize="16sp"
-                        tools:text="JUAN CARLOS PEREZ" />
+                        android:textSize="16sp" />
 
                     <View
                         android:layout_width="match_parent"
@@ -114,11 +112,10 @@
                         android:id="@+id/tvFechaNacimiento"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginBottom="16dp"
                         android:layout_marginTop="2dp"
+                        android:layout_marginBottom="16dp"
                         android:textColor="#212121"
-                        android:textSize="16sp"
-                        tools:text="01/01/1995" />
+                        android:textSize="16sp" />
 
                     <View
                         android:layout_width="match_parent"
@@ -139,11 +136,10 @@
                         android:id="@+id/tvCiudad"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginBottom="16dp"
                         android:layout_marginTop="2dp"
+                        android:layout_marginBottom="16dp"
                         android:textColor="#212121"
-                        android:textSize="16sp"
-                        tools:text="QUITO" />
+                        android:textSize="16sp" />
 
                     <View
                         android:layout_width="match_parent"
@@ -164,11 +160,10 @@
                         android:id="@+id/tvGenero"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginBottom="16dp"
                         android:layout_marginTop="2dp"
+                        android:layout_marginBottom="16dp"
                         android:textColor="#212121"
-                        android:textSize="16sp"
-                        tools:text="Masculino" />
+                        android:textSize="16sp" />
 
                     <View
                         android:layout_width="match_parent"
@@ -189,11 +184,10 @@
                         android:id="@+id/tvCorreo"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginBottom="16dp"
                         android:layout_marginTop="2dp"
+                        android:layout_marginBottom="16dp"
                         android:textColor="#212121"
-                        android:textSize="16sp"
-                        tools:text="usuario@ejemplo.com" />
+                        android:textSize="16sp" />
 
                     <View
                         android:layout_width="match_parent"
@@ -216,8 +210,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginTop="2dp"
                         android:textColor="#212121"
-                        android:textSize="16sp"
-                        tools:text="0991234567" />
+                        android:textSize="16sp" />
 
                 </LinearLayout>
             </com.google.android.material.card.MaterialCardView>
