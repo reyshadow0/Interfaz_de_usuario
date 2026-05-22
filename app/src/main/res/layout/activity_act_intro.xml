@@ -22,10 +22,13 @@
 
     <com.airbnb.lottie.LottieAnimationView
         android:id="@+id/animationView"
-        android:layout_width="409dp"
-        android:layout_height="336dp"
+        android:layout_width="349dp"
+        android:layout_height="290dp"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/imageView"
+        app:layout_constraintStart_toStartOf="@+id/imageView"
         app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.521"
         app:lottie_autoPlay="true"
         app:lottie_loop="true"
         app:lottie_rawRes="@raw/robot" />
@@ -34,10 +37,11 @@
         android:id="@+id/button2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
         android:text="Entrar"
-        app:layout_constraintEnd_toEndOf="@+id/animationView"
-        app:layout_constraintHorizontal_bias="0.501"
-        app:layout_constraintStart_toStartOf="@+id/animationView"
-        app:layout_constraintTop_toBottomOf="@+id/animationView" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/animationView"
+        app:layout_constraintVertical_bias="0.245" />
 </androidx.constraintlayout.widget.ConstraintLayout>
