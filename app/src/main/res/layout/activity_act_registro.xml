@@ -1,0 +1,315 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".act_registro">
+
+    <ImageView
+        android:id="@+id/imgLogoUser"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_accountcircle" />
+
+    <TextView
+        android:id="@+id/txtRegistro"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Registro de Usuario"
+        android:textColor="@color/purple_primary"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imgLogoUser" />
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="8dp"
+        android:fillViewport="true"
+        app:layout_constraintBottom_toTopOf="@+id/btnLimpiar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtRegistro">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="16dp">
+
+            <!-- 1. Cédula -->
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tilCedula"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
+                android:hint="Cédula"
+                app:boxStrokeColor="@color/purple_primary"
+                app:counterEnabled="true"
+                app:counterMaxLength="10"
+                app:hintTextColor="@color/purple_primary"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:startIconDrawable="@drawable/ic_cedula"
+                app:startIconTint="@color/purple_primary">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/tietCedula"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="number"
+                    android:maxLength="10" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- 2. Nombres -->
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tilNombre"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="12dp"
+                android:layout_marginEnd="16dp"
+                android:hint="Nombres"
+                app:boxStrokeColor="@color/purple_primary"
+                app:counterEnabled="true"
+                app:counterMaxLength="500"
+                app:hintTextColor="@color/purple_primary"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tilCedula"
+                app:startIconDrawable="@drawable/ic_user"
+                app:startIconTint="@color/purple_primary">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/tietNombres"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textCapCharacters"
+                    android:maxLength="500" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- 3. Fecha de Nacimiento -->
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tilFechaNacimiento"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="12dp"
+                android:layout_marginEnd="16dp"
+                android:hint="Fecha de Nacimiento"
+                app:boxStrokeColor="@color/purple_primary"
+                app:counterEnabled="true"
+                app:counterMaxLength="10"
+                app:hintTextColor="@color/purple_primary"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tilNombre"
+                app:startIconDrawable="@drawable/ic_calendar"
+                app:startIconTint="@color/purple_primary">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/tietFechaNacimiento"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:cursorVisible="false"
+                    android:focusable="false"
+                    android:focusableInTouchMode="false"
+                    android:inputType="none"
+                    android:maxLength="10" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- 4. Ciudad -->
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tilCiudad"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="12dp"
+                android:layout_marginEnd="16dp"
+                android:hint="Ciudad"
+                app:boxStrokeColor="@color/purple_primary"
+                app:counterEnabled="true"
+                app:counterMaxLength="200"
+                app:hintTextColor="@color/purple_primary"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tilFechaNacimiento"
+                app:startIconDrawable="@drawable/ic_city"
+                app:startIconTint="@color/purple_primary">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/tietCiudad"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textCapCharacters"
+                    android:maxLength="200" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- 5. Género -->
+            <TextView
+                android:id="@+id/txtGenero"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="16dp"
+                android:text="Género"
+                android:textColor="@color/purple_primary"
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tilCiudad" />
+
+            <RadioGroup
+                android:id="@+id/rgGenero"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="4dp"
+                android:layout_marginEnd="16dp"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txtGenero">
+
+                <RadioButton
+                    android:id="@+id/rbMasculino"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:buttonTint="@color/purple_primary"
+                    android:text="Masculino" />
+
+                <RadioButton
+                    android:id="@+id/rbFemenino"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:buttonTint="@color/purple_primary"
+                    android:text="Femenino" />
+
+                <RadioButton
+                    android:id="@+id/rbOtro"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:buttonTint="@color/purple_primary"
+                    android:text="Otro" />
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/tvGeneroError"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:textColor="#B00020"
+                android:textSize="12sp"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/rgGenero" />
+
+            <!-- 6. Correo Electrónico -->
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tilCorreo"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="12dp"
+                android:layout_marginEnd="16dp"
+                android:hint="Correo Electrónico"
+                app:boxStrokeColor="@color/purple_primary"
+                app:counterEnabled="true"
+                app:counterMaxLength="100"
+                app:hintTextColor="@color/purple_primary"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvGeneroError"
+                app:startIconDrawable="@drawable/mail"
+                app:startIconTint="@color/purple_primary">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/tietCorreo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textEmailAddress"
+                    android:maxLength="100" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- 7. Teléfono Celular -->
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tilTelefono"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="12dp"
+                android:layout_marginEnd="16dp"
+                android:hint="Teléfono Celular"
+                app:boxStrokeColor="@color/purple_primary"
+                app:counterEnabled="true"
+                app:counterMaxLength="10"
+                app:hintTextColor="@color/purple_primary"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tilCorreo"
+                app:startIconDrawable="@drawable/ic_phone"
+                app:startIconTint="@color/purple_primary">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/tietTelefono"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="phone"
+                    android:maxLength="10" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+    <!-- 8. Botón Limpiar -->
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnLimpiar"
+        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="16dp"
+        android:text="Limpiar Formulario"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/btnEnviar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:strokeColor="@color/purple_primary"
+        app:rippleColor="@color/purple_primary"/>
+
+    <!-- 9. Botón Enviar -->
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnEnviar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:backgroundTint="@color/purple_primary"
+        android:text="Enviar"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/btnLimpiar" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
